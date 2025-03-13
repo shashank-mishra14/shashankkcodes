@@ -1,5 +1,5 @@
 import hand from '@/assets/images/hand.png'
-import profile from '@/assets/images/profile.png'
+import profile from '@/assets/images/profile.jpg'
 import Image from 'next/image'
 import SectionHeader from '../ui/SectionHeader'
 
