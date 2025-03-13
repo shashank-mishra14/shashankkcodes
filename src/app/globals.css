@@ -1,26 +1,179 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  heigth: 100%;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* code mdx */
+
+.post-code {
+  @apply rounded-md border dark:border-dark48;
+}
+
+pre {
+  @apply overflow-x-auto rounded-b-xl p-8 text-base;
+}
+
+article :not(pre) > code {
+  @apply mx-1 bg-muted px-1.5 text-black dark:bg-dark48 dark:text-inherit;
+}
+
+code {
+}
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: rgb(99, 119, 119);
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #abb2bf;
+}
+
+.namespace {
+  color: rgb(178, 204, 214);
+}
+
+.token.deleted {
+  color: #e06c75;
+  font-style: italic;
+}
+
+.token.symbol,
+.token.property,
+.token.property-access {
+  color: #e06c75;
+}
+
+.token.tag,
+.token.operator,
+.token.keyword {
+  color: #c678dd;
+}
+
+.token.number,
+.token.boolean {
+  color: #d19a66;
+}
+
+.token.constant,
+.token.function,
+.token.builtin,
+.token.char {
+  color: #61afef;
+}
+
+.token.selector,
+.token.doctype {
+  color: #c678dd;
+  font-style: italic;
+}
+
+.token.attr-name,
+.token.inserted {
+  color: #e5c07b;
+  font-style: italic;
+}
+
+.token.string,
+.token.url,
+.token.entity,
+.language-css .token.string,
+.style .token.string {
+  color: #98c379;
+}
+
+.token.class-name,
+.token.atrule,
+.token.attr-value {
+  color: #e5c07b;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #d19a66;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+/* code mdx */
+
+@layer base {
+  .article ul,
+  .article ol,
+  .article p {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+    letter-spacing: revert;
+    line-height: revert;
+  }
+  .clean-style table {
+    border-width: 1px;
+  }
+  .clean-style table > tbody,
+  .clean-style table > tbody > tr,
+  .clean-style table > tbody > tr > td {
+    border-width: inherit;
+    border-color: inherit;
+  }
+  .clean-style h1,
+  .clean-style h2,
+  .clean-style h3,
+  .clean-style h4,
+  .clean-style h5,
+  .clean-style h6 {
+    font-size: revert;
+    line-height: revert;
+    letter-spacing: revert;
+  }
+}
+
+article a {
+  @apply cursor-pointer border-b border-black font-semibold no-underline;
+}
+
+.article div img {
+  max-height: 400px;
+  object-fit: contain;
 }
