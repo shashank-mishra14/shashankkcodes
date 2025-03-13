@@ -1,4 +1,4 @@
-import { skills } from '@/data/skils'
+import { skills } from '@/data/skills'
 import SectionHeader from '../ui/SectionHeader'
 import SingleTech from '../ui/SingleTech'
 
