@@ -1,0 +1,41 @@
+---
+title: "RideSense"
+isPublished: true
+popular: true
+image: '/img/works/ridesense.png'
+excerpt: "Platform for riders to share their routes, experiences and connect with other riders."
+---
+
+RideSense is a community-driven platform that enables motorcycle and bicycle enthusiasts to discover, share, and connect through their riding experiences. Launched in 2024, RideSense serves as a digital hub for riders of all levels to explore new routes, document their journeys, and build connections with fellow riding enthusiasts.
+
+## Features
+
+- **Route Discovery:** Browse and filter through user-contributed riding routes based on difficulty, terrain, scenery, and distance.
+
+- **Experience Sharing:** Document riding experiences with photos, videos, and detailed descriptions that capture the essence of each journey.
+
+- **Community Connection:** Connect with other riders, follow their activities, and organize group rides through the platform.
+
+- **Performance Tracking:** Monitor and analyze riding statistics including distance, elevation, speed, and more through integration with popular fitness trackers.
+
+## Technical Implementation
+
+RideSense is built using a modern tech stack designed for performance and scalability:
+
+- **Frontend:** Next.js with TypeScript and Tailwind CSS for responsive design
+- **Backend:** Node.js with Express handling API requests and real-time connections
+- **Database:** MongoDB for flexible data storage and retrieval
+- **Maps Integration:** Leveraging Mapbox API for interactive route visualization and creation
+- **Media Storage:** AWS S3 for efficient storage of user-uploaded photos and videos
+
+## Challenges
+
+### Real-time Location Tracking
+Implementing efficient real-time location tracking for group rides while minimizing battery consumption on mobile devices was a significant challenge. The solution involved optimizing the polling frequency and implementing a smart tracking algorithm.
+
+### Route Visualization
+Creating an intuitive interface for viewing and creating complex routes required careful consideration of user experience and performance. The implementation uses vector-based rendering with elevation data to provide rich, interactive maps.
+
+Live: [ridesense.vercel.app](https://ridesense.vercel.app)
+
+Github: [github.com/shashank-mishra14/ridesense_website](https://github.com/shashank-mishra14/ridesense_website)

@@ -7,9 +7,9 @@ export const DEFAULT_DESCRIPTION =
   'Web & Frontend developer, passionate about building apps from scratch, perfecting both backend and frontend.'
 export const DEFAULT_IMAGE_URL = '/img/baner.png'
 
-export const EMAIL = 'zlvsky@icloud.com'
-export const NAME = 'Krzysztof Zaleski'
-export const POSITION = 'full stack developer'
+export const EMAIL = 'shashank.mishra.dev14@gmail.com'
+export const NAME = 'Shashank Mishra'
+export const POSITION = 'Software Developer'
 export const AUTHOR_DESC =
   'Web & Frontend developer based in India,  Passionate about creative solutions and building apps from scratch.'
 
