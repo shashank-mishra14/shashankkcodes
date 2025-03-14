@@ -13,6 +13,7 @@ import Skills from '@/components/main-page/Skills'
 export default function Home() {
   return (
     <PageWrap>
+      
       <Header />
       <Container>
         <SmallWrap id="main">

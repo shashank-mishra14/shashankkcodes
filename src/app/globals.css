@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "postcss-dark-theme-class";
 
 :root {
   --background: 0 0% 100%;
@@ -23,6 +22,20 @@
   --input: 240 5.9% 90%;
   --ring: 240 5.9% 10%;
   --radius: 0.5rem;
+
+  --dark: #1c1d1f;
+  --gray2: #606060;
+  --grayE8: #E8E8E8;
+  --gray7B: #7B7B7B;
+  --dark26: #262626;
+  --dark48: #484848;
+  --grayText1: #555;
+  --grayText2: #a8a8a8;
+  --textHover: #21201c;
+  --green: #2CA56B;
+  
+  /* Font family */
+  --font-inter: 'Inter', sans-serif;
 }
 
 body {
@@ -33,12 +46,28 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .text-20 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+  
+  .text-40 {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+
+  /* Project shadow */
+  .shadow-project {
+    box-shadow: 0px 8px 16px 0px rgba(3, 7, 18, 0.08), 0px 0px 0px 1px rgba(3, 7, 18, 0.08);
+  }
 }
+
+
 
 /* code mdx */
 
 .post-code {
-  @apply rounded-md border dark:border-dark48;
+  @apply rounded-md border dark:border-[--dark48];
 }
 
 pre {
@@ -46,7 +75,7 @@ pre {
 }
 
 article :not(pre) > code {
-  @apply mx-1 bg-muted px-1.5 text-black dark:bg-dark48 dark:text-inherit;
+  @apply mx-1 bg-[--muted] px-1.5 text-black dark:bg-[--dark48] dark:text-inherit;
 }
 
 code {
@@ -139,6 +168,10 @@ code {
 /* code mdx */
 
 @layer base {
+  html {
+    font-family: var(--font-inter);
+  }
+
   .article ul,
   .article ol,
   .article p {
